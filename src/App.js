@@ -4,6 +4,7 @@ import "./App.css";
 export default class App extends React.Component {
   state = {
     name: "",
+    lastname: "",
     error: false,
     register: [],
     errorMessage: ""
@@ -13,7 +14,7 @@ export default class App extends React.Component {
     const { value, name } = e.target;
     this.setState({
       error: !e.target.checkValidity(),
-      errorMessage: `Error - ${name}`
+      errorMessage: `Ooops! asi no es...`
     });
     //console.log(e.target.checkValidity(true));
     this.setState({ [name]: value });
@@ -57,7 +58,7 @@ export default class App extends React.Component {
         </form>
         <ul>
           {this.state.register.map(element => (
-            <li key={element}>{element}</li>
+            <li key={element}>{element} </li>
           ))}
         </ul>
       </div>
